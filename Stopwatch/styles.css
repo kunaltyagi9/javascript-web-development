@@ -1,0 +1,40 @@
+body {
+  background-color: #17D4EF;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  text-align: center;
+  color: #FFF;
+}
+
+.wrapper h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.wrapper #seconds, .wrapper #tens {
+  font-size: 32px;
+}
+
+.wrapper button {
+  border-radius: 5px;
+  background-color: #17D4EF;
+  color: #FFF;
+  font-size: 18px;
+  padding: 18px 10px;
+  width: 180px;
+  margin: 10px;
+  border: 1px solid #FFF;
+  cursor: pointer;
+}
+
+.wrapper button:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: #FFF;
+  color: #17D4EF;
+  border: 1px solid #FFF;
+}
+/*# sourceMappingURL=styles.css.map */

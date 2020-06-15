@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin-top: 5%;
+    width: 450px;
+}
+
+.screen{
+    background: rgb(2, 2, 43);
+    padding: 20px;
+    width: 100%;
+    color:#fff;
+    font-size: 60px;
+    border: none;
+}
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+button{
+    flex: 22%;
+    font-size: 64px;
+    border:  1px solid black;
+
+}
+
+.btn{
+    background: orange;
+    color: white;
+}
+
+.btn-green{
+    background-color: green;
+}
+
+.btn-red{
+    background-color: red;
+}

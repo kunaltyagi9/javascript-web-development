@@ -1,35 +1,20 @@
-
 window.onload = () => {
+    function buildClock() {
+        const date = new Date();
 
-    function showTime() {
-        let date = new Date();
-        let hour = date.getHours(); // 0 - 23
-        let minutes = date.getMinutes(); // 0 -59
-        let seconds = date.getSeconds(); // 0 -59
+        let hours = date.getHours(); // 0 - 23
+        let minutes = date.getMinutes(); // 0 - 59
+        let seconds = date.getSeconds(); // 0 - 59
 
-        let session = 'AM';
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        if (hour === 0) {
-            hour = 12;
-        }
+        document.querySelector('#clock-hours').innerText = hours;
+        document.querySelector('#clock-minutes').innerText = minutes;
+        document.querySelector('#clock-seconds').innerText = seconds;
 
-        if (hour > 12) {
-            hour = hour - 12;
-            session = 'PM';
-        }
-
-        hour = (hour < 10) ? '0' + hour : hour;
-        minutes = (minutes < 10) ? '0' + minutes : minutes;
-        seconds = (seconds < 10) ? '0' + seconds : seconds;
-
-        let time = hour + ':' + minutes + ':' + seconds + ' ' + session;
-
-        document.querySelector('#myTime').innerText = time;
-
-
-        setTimeout(showTime, 1000);
+        setTimeout(buildClock, 1000);
     }
-
-    showTime();
-
+    buildClock();
 }

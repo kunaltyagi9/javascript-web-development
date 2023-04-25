@@ -1,43 +1,49 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    background-color: #33ffd8;
     display: flex;
     justify-content: center;
 }
 
-.container{
-    margin-top: 5%;
-    width: 450px;
+.container {
+    margin-top: 20px;
+    width: 400px;
+    height: fit-content;
+    background-color: #445A6F;
+    border-radius: 10px;
 }
 
-.screen{
-    background: rgb(2, 2, 43);
-    padding: 20px;
-    width: 100%;
-    color:#fff;
-    font-size: 60px;
+.screen {
+    background-color: #445A6F;
     border: none;
+    padding: 10px;
+    width: 90%;
+    color: #F5F5F5;
+    font-size: 60px;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.buttons{
+.buttons {
     display: flex;
     flex-wrap: wrap;
-    
-}
-button{
-    flex: 22%;
-    font-size: 64px;
-    border:  1px solid black;
-
 }
 
-.btn{
-    background: orange;
-    color: white;
+button {
+    flex: 20%;
+    font-size: 40px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #445A6F;
+    color: #F5F5F5;
+    opacity: .8;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn-green{
-    background-color: green;
-}
-
-.btn-red{
-    background-color: red;
+.btn {
+    color: #33ffd8;
 }

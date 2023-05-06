@@ -1,31 +1,34 @@
-window.onload = () =>{
-    let button = document.querySelector('#btn');
-    button.addEventListener('click', calculateBMI);
+window.onload = () => {
+    const button = document.querySelector('#btn');
+    button.addEventListener('click', calculateBmi)
 }
 
+function calculateBmi() {
+    const height = document.querySelector('#height').value;
+    const weight = document.querySelector('#weight').value;
+    const result = document.querySelector('#result');
 
-function calculateBMI(){
-    let height = parseInt(document.querySelector('#height').value);
-    let weight = parseInt(document.querySelector('#weight').value);
-    let result = document.querySelector('#result');
-    console.log(height);
-    if(height === '' || isNaN(height) || height < 0){
-        result.innerHTML = 'Please provide a valid height';
-    }else if(weight === '' || isNaN(weight) || weight < 0){
-        result.innerHTML = 'Please provide a valid weight';
+    if (!height || isNaN(height) || height < 0) {
+        result.innerText = "Please provide a valid height";
+        return;
+    } else if (!weight || isNaN(weight) || weight < 0) {
+        result.innerText = "Please provide a valid weight";
+        return;
     }
 
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
 
-    else{
-         let bmi = (weight / ((height * height) / 10000)).toFixed(2); 
-
-
-         if(bmi < 18.6){
-             result.innerHTML = `Under Weight : <span>${bmi}</span>`;
-         }else if(bmi >= 18.6 && bmi < 24.9){
-            result.innerHTML = `Normal : <span>${bmi}</span>`;
-         } else{
-            result.innerHTML = `Over Weight : <span>${bmi}</span>`;
-         }
+    if (bmi < 18.5) {
+        result.innerText = `Under Weight: ${bmi}`; 
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        result.innerText = `Normal: ${bmi}`;
+    } else if (bmi >= 25 && bmi < 29.9) {
+        result.innerText = `Over Weight: ${bmi}`;
+    } else if (bmi >= 30 && bmi < 34.9) {
+        result.innerText = `Obesity (Class I): ${bmi}`;
+    } else if (bmi >= 35.5 && bmi < 39.9) {
+        result.innerText = `Obesity (Class II) : ${bmi}`;
+    } else {
+        result.innerText = `Extreme Obesity: ${bmi}`;
     }
 }

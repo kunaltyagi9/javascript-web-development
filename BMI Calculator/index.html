@@ -1,25 +1,24 @@
+<!DOCTYPE html>
+
 <html>
+    <head>
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>BMI Calculator</h1>
 
-<head>
-    <link rel="stylesheet" href="style.css">
-    <script src = "app.js"></script>
-</head>
+            <p>Height (cm)</p>
+            <input type="number" id="height">
 
-<body>
-    <div class="container">
-        <h1>BMI Calculator</h1>
+            <p>Weight (kg)</p>
+            <input type="number" id="weight">
 
-        <p>Height (in cm)</p>
-        <input type="text" id = "height">
+            <button id="btn">Calculate</button>
 
-        <p>Weight (in kg)</p>
-        <input type="text" id = "weight">
-
-        <button id  = "btn">Calculate</button>
-
-        <div id = "result"></div>
-
-    </div>
-</body>
-
+            <div id="result"></div>
+        </div>
+    </body>
 </html>

@@ -1,59 +1,68 @@
-body{
-    background-color: #001f4f;
-    font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.container{
-    width: 350px;
-    height: 500px;
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #c5e4e7;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+    margin-top: 50px;
+    width: 800px;
+    height: 450px;
     background-color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
     border-radius: 20px;
+    display: flex;
 }
 
-h1{
-    position: absolute;
-    left: 50%;
-    top: -60px;
-    width: 300px;
-    transform: translateX(-50%);
-    background-color: #FF851B;
-    color: #fff;
-    font-weight: 100;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
+.wrapper {
+    padding: 40px;
+    width: 50%;
 }
 
-.wrapper{
-    padding: 20px;
-}
-
-input, select{
+input {
     width: 80%;
     border: none;
-    border-bottom: 1px solid #0074D9;
-    padding: 10px ;
+    background: #f3f8fb;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border-radius: 2px;
 }
 
-input:focus, select:focus{
-    border: 1px solid #0074D9;
+input:focus {
     outline: none;
 }
 
-select{
-    width: 88% !important;
+input::placeholder {
+    opacity: 0.7;   
 }
 
-button{
-    margin: 20px auto;
-    width: 150px;
-    height: 50px;
+.tips {
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.tip {
+    background: #00474b;
+    color: #a4cdd1;
+    min-width: 80px;
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button {
+    height: 40px;
+    width: 100%;
     background-color: #39CCCC;
     color: #fff;
     font-size: 16px;
@@ -61,9 +70,17 @@ button{
     border-radius: 5px;
 }
 
+.right-wrapper {
+    background: #00474b;
+    color: #9dc8c9;
+    width: 50%;
+    padding: 30px;
+}
 
-.tip{
-    text-align: center;
-    font-size: 18px;
-    display: none;
+.right-wrapper p {
+    margin-bottom: 20px;
+}
+
+span {
+    font-size: 30px;
 }

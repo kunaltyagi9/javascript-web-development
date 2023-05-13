@@ -1,30 +1,40 @@
-window.onload = () =>{
-    document.querySelector('#calculate').onclick = calculateTip;
+const varObj = {
+    tip: 0
 }
 
-function calculateTip(){
-    let amount = document.querySelector('#amount').value;
-    let persons = document.querySelector('#persons').value;
-    let service = document.querySelector('#services').value;
-    
-    console.log(service);
-    if(amount === '' && service === 'Select'){
-        alert("Please enter valid values");
+window.onload = () => {
+    document.querySelector('#calculate').onclick = calculateTip;
+    document.querySelector('#reset').onclick = resetValues;
+
+    const tips = document.querySelectorAll('.tip');
+
+    tips.forEach(tip => {
+        tip.addEventListener('click', handleTipClick);
+    })
+}
+
+
+function handleTipClick(e) {
+    varObj.tip = Number(e.target.textContent.split('%')[0]);
+}
+
+function calculateTip() {
+    const amount = Number(document.querySelector('#amount').value);
+    const people = Number(document.querySelector('#people').value);
+
+    if (!amount && !people) {
+        alert("Please enter values");
         return;
     }
 
-    if(persons === '1'){
-        document.querySelector('#each').style.display = 'none';
-    }else{
-        document.querySelector('#each').style.display = 'block';
-    }
+    const tip = (amount * varObj.tip) / 100;
+    const billPerPerson = (amount + tip) / people;
 
-    let total = (amount * service) / persons;
-    console.log(total);
-    total = Math.round(total * 100)/ 100;
-    total = total.toFixed(2);
-    console.log(total);
+    document.querySelector('#tipamount').innerText = tip / people;
+    document.querySelector('#totalamount').innerText = billPerPerson;
+}
 
-    document.querySelector('.tip').style.display = 'block';
-    document.querySelector('#total').innerHTML = total;
+function resetValues () {
+    document.querySelector('#tipamount').innerText = 0;
+    document.querySelector('#totalamount').innerText = 0;
 }

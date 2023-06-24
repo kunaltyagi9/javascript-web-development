@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    justify-content: center;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+}
+
+.calendar {
+    margin-top: 50px;
+    background-color: #000;
+    color: #F5F5F5;
+    width: 450px;
+    height: 480px;
+    border-radius: 10px;
+}
+
+.month {
+    background-color: #445A6F;
+    border-radius: 10px 10px 0 0;
+    height: 100px;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.month h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.month p {
+    font-size: 16px;
+}
+
+.weekdays {
+    display: flex;
+    margin-top: 25px;
+}
+
+.weekdays div {
+    font-size: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+    margin-top: 15px;
+}
+
+.days div {
+    font-size: 14px;
+    margin: 3px;
+    width: 57px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.today {
+    background-color: #445A6F;
+    border-radius: 50%;
+}
